@@ -74,6 +74,9 @@ function seekAdToEndIfPresent() {
 
   if (isAdDialogPresent()) {
     hideAdDialogs();
+    setTimeout(() => {
+      video.paused && video.play();
+    }, 500);
   }
 
   if (isAdPlaying()) {
